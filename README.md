@@ -5,5 +5,5 @@
     Easy to download,change and learn
     Fast and expandible 
  Technologies:
-    Speech Recognition 
+    Speech Recognition(Google API)
     Speech Synthesis
