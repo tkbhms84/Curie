@@ -1,8 +1,12 @@
 #Import Libraries
 import speech_recognition as sr
 import datetime
+import pyttsx3
 
 r=sr.Recognizer()
+engine = pyttsx3.init()
+engine.say("I will speak this text")
+engine.runAndWait()
 def googlelisten():
     #Get the default microphone
     with sr.Microphone() as source:
