@@ -5,8 +5,8 @@ import pyttsx3
 
 r=sr.Recognizer()
 engine = pyttsx3.init()
-engine.say("I will speak this text")
-engine.runAndWait()
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[1].id)
 def googlelisten():
     #Get the default microphone
     with sr.Microphone() as source:
