@@ -1,4 +1,7 @@
 #Import Libraries
+import flask
+import win32api
+import os
 import speech_recognition as sr
 import datetime
 import pyttsx3
@@ -7,6 +10,8 @@ r=sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
+rate = engine.getProperty('rate')
+engine.setProperty('rate', 250)
 
 def speak():
     engine.say(x)
@@ -25,7 +30,9 @@ while True:
     command=googlelisten()
     print(command)
     if 'time' in command:
-        print(getdate())
+        date=getdate()
+        print(date)
+        speak(date)
     break
 
 
